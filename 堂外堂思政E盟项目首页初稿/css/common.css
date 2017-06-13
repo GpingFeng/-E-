@@ -17,7 +17,7 @@ html{
 
 #header #welcome{
 	width: 100%;
-	height: 30px;
+	height: 25px;
 	background:#dedede;
 	overflow: hidden;
 }
@@ -25,6 +25,9 @@ html{
 #header #welcome .welcome{
 	width: 1080px;
 	margin: 0 auto;
+	overflow: hidden;
+	line-height: 25px;
+	height: 25px;
 }
 
 #header #welcome .welcome>span{
@@ -32,12 +35,12 @@ html{
 	display: inline-block;
 	width: 400px;
 	font-size: 1.2rem;
-	margin-top: 8px;
+	line-height: 25px;
+	height: 25px;
 }
 
 #header #welcome .welcome ul{
 	float: right;
-	margin-top: 8px;
 	font-size: 1.2rem;
 	display: inline-block;
 }
@@ -53,6 +56,9 @@ html{
 
 #header #welcome .welcome ul li a{
 	color: #424242;
+}
+#nav-header{
+	overflow: hidden;
 }
 
 #nav-header,#nav_title,#nav_content{
@@ -72,9 +78,12 @@ html{
 }
 
 #nav-header .weather{
+	float: left;
 	width: 220px;
-	height: 105px;
+	height: 70px;
+	margin-top: 25px;
 	display: inline-block;
+	padding-left: 20px;
 }
 
 #nav-header>.search{
@@ -208,6 +217,10 @@ html{
 
 #nav_content .nav_content .course,#nav_content .nav_content .course>ul{
 	width: 120px;
+}
+
+#nav_content .nav_content .course>ul li{
+	padding:0 5px;
 }
 
 /*底部部分*/

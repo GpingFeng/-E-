@@ -1,0 +1,43 @@
+<html> 
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/> 
+	<title>Jump page</title> 
+	<style type="text/css">
+		#container{
+			text-align: center;
+			margin: 200px 0;
+		}
+
+		#container input{
+			border:none;
+			width: 10px;
+		}
+	</style>
+	<script type="text/javascript"> 
+		var t = 5;//设置时间为5s
+		function countDown(){
+			var time = document.getElementById("time");
+			t--;
+			time.value = t;
+			if (t<=0) {
+				window.location.href = "https://www.baidu.com/?tn=93912046_hao_pg";
+				clearInterval(inter);
+			}
+		};
+
+		var inter = setInterval('countDown()',1000);
+	</script> 
+
+</head> 
+<body> 
+
+	<div id="container">登录成功，还有
+	<input type="text" readonly="true" value="5" id="time"/> 
+	s后跳转
+	</div>	
+
+<script type="text/javascript">
+	countDown();
+</script>
+</body> 
+</html> 
