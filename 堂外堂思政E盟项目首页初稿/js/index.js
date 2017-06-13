@@ -11,21 +11,24 @@ $(document).ready(function(){
 		});
 	})
 
+	//解决iframe问题
+	// $(function(){
+	// 	$("#frame1").attr("src","http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1");
+	// })
+
 	// 轮播效果的实现
 	var t = n = 0;
-	count = $("#playShow > a").length;	
+	count = $("#playShow > a").length; //计算有多少项
 	$(function(){
-		$("#playShow a:not(:first-child)").hide();
-		$("#playText").html($("#playShow a:first-child").find("img").attr('alt'));
-		$("#playNum a:first").css({"background":"#e8413e",'color':'#A8471C'});
-		// $("#playText").click(function(){window.open($("#playShow a:first-child").attr('href'), "_blank")});
+		$("#playShow a:not(:first-child)").hide();//显示第一项
+		$("#playText").html($("#playShow a:first-child").find("img").attr('alt'));//设置文字说明
+		$("#playNum a:first").css({"background":"#e8413e",'color':'#A8471C'});//第一个的数字样式
 		$("#playNum a").click(function() {
-		   var i = $(this).text() - 1;
+		   var i = $(this).text() - 1;//求得索引
 		   n = i;
 		   if (i >= count) return;
-		   $("#playText").html($("#playShow a").eq(i).find("img").attr('alt'));
-		   // $("#playText").unbind().click(function(){window.open($("#playShow a").eq(i).attr('href'), "_blank")})
-		   $("#playShow a").filter(":visible").hide().parent().children().eq(i).fadeIn(1200);
+		   $("#playText").html($("#playShow a").eq(i).find("img").attr('alt'));//设置文字说明
+		   $("#playShow a").filter(":visible").hide().parent().children().eq(i).fadeIn(1200);//隐藏现在的，设置显示效果
 		   $(this).css({"background":"#e8413e",'color':'#A8471C'}).siblings().css({"background":"#D7D6D7",'color':'#000'});
 	});
 	t = setInterval("showAuto()", 5000);
@@ -71,6 +74,7 @@ $(document).ready(function(){
 			$(".friend .common-content ul").eq(n).siblings("ul").hide();
 			$(".friend .common-content ul").eq(n).show();
 		});
+		
 		$(".friend .common-content .left").click(function(){
 			n = $(".friend .second-title ul li span.active").parent().index();
 			if(n<0){
@@ -97,7 +101,7 @@ $(document).ready(function(){
 			$("#nav_title ul li.up").click(function(){
 				$("#nav_title ul li.more").show();
 				$("#nav_title ul li.more").nextAll().hide();
-				$("#nav_title ul li.more").nextAll.fadeOut();
+				$("#nav_title ul li.more").nextAll().fadeOut();
 			})
 		});
 
@@ -117,8 +121,10 @@ $(document).ready(function(){
 	}
 });
 
-	function showAuto()
+function showAuto()
 	{
-		n = n >= (count - 1) ? 0 : ++n;
-		$("#playNum a").eq(n).trigger('click');
+		n = n >= (count - 1) ? 0 : ++n;//当它超过项目数时，归零
+		$("#playNum a").eq(n).trigger('click');//触发当前点击事件
 	};
+
+	

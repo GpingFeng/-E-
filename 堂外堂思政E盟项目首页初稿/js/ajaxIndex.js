@@ -1,8 +1,10 @@
+
+
 // $(function(){
 //   $.ajax({
-//     url: ,
+//     url: '',
 //     type:"get",
-//     data:{ text:'$(".news-show .news-content ul li span.text")',date:'$(".news-show .news-content ul li span.date")'},
+//     data:{ 'text':'lesson','date':'lessonDate'},
 //     datatype:"json",
 //     success:succFunction,
 //     error:erryFunction
@@ -10,7 +12,7 @@
 // })
 
 //轮播部分
-function playFun() {  
+function playFun(result) { 
             var playLi = $("#play ul li#playShow a");
             playLi.html('');  
 
@@ -25,7 +27,7 @@ function playFun() {
                  var playImg = obj.playImg;  
                  var playTitle = obj.playTitle;
                  var playImgurl = obj.playImgurl;
-
+ 
                  nText.attr("src",playImg);
                 nText.attr("alt",playTitle);
                 playLi.eq(index).append(nText);
@@ -65,9 +67,6 @@ function newsFun() {
         });  
     }  
 
-function erryFunction(){
-
-}
 
         newsFun();
 // 名师新秀

@@ -239,7 +239,8 @@ html{
 }		
 }
 
-/*适配手机端*/
+
+/*媒体查询，适配手机端*/
 @media only screen and (max-width: 500px) {
 	body{
 		overflow-X: hidden;
@@ -265,36 +266,44 @@ html{
 		width: 100%;
 	}
 
+	#header #nav-header .search .form-control{
+		background: #D4D4D4;
+		color: #000;
+	}
+
 	#header #nav-header .logo>a>img{
-		width: 30%;
+		width: 15%;
 		position: relative;
 		top: 50px;
 	}
 
 	#header #nav-header .weather{
-		width: 30%;
-		height: 75px;
 		position: relative;
-		left: 140px;
+		top: 15px;
+		left: 80px;
 		display: inline-block;
 	}
 
 	#header #nav-header .login_btn{
 		display: inline-block;
-		position: relative;
-		left: 140px;
-		bottom: 40px;
+		/*width: 30%;*/
 		font-size: 0;
+		float: right;
+		position: relative;
+		top: 20px;
+		right: 15px;
 	}
 
 	#nav-header>.login_btn .login{
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		padding: 0px;
 	}
 
 	#nav-header>.login_btn .regis{
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
+		padding: 0px;
 	}
 
 	#header #nav-header .submit{

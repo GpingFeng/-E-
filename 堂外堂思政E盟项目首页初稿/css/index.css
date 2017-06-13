@@ -66,7 +66,9 @@
 	border-radius: 2px;
 	width: 495px;
 	height: 250px;
+	position: relative;
 	float: left;
+
 }
 
 #content .commonClass .news-title{
@@ -302,6 +304,7 @@
 	margin-top: 40px;
 	width: 790px !important;
 	height: 345px !important;
+	position: relative;
 }
 
 .commonClass .second-title{
@@ -407,13 +410,12 @@
 .express .common-content  .more{
 	width: 100%;
 	text-align: center;
-	position: relative;
-	top: -8px;
+	position: absolute;
+	bottom: 0px;
 	color: #5f5e5e;
-}
-
-.express .common-content .more:hover{
 	background: #eceef2;
+	height: 25px;
+	line-height: 25px;
 }
 
 /*会议论坛*/
@@ -516,8 +518,11 @@
 }
 
 .friend .other-school {
+	position: absolute;
+	bottom: 0px;
 	background-color: #ccc;
 	padding-left: 30px;
+	width: 100%;
 }
 .friend .other-school select {
 	width: 200px;
@@ -578,17 +583,6 @@
 	#content{
 		width: 100%;
 	}
-
-	.login_btn{
-		position: relative;
-		top: 13px;
-		left: 3px;
-		/*margin-left: 30px;*/
-	}	
-	.login_btn button{
-		/*height: 10px;*/
-	}
-
 	/*轮播*/
 	#content #play{
 		width: 100%;
@@ -625,7 +619,7 @@
 	#content #play ul li#playNum{
 		position: relative;
 		top: 245px;
-		left: 290px;
+		left: 260px;
 		list-style: none;	
 		letter-spacing: 2px;
 		z-index: 11;
@@ -646,10 +640,10 @@
 	/*最新资料*/
 	#content .commonClass{
 		border:none;
-		height: 250px;
 		float: left;
 		margin-top: 5px;
 		width: 100%;
+		position: relative;
 	}
 
 	#content .commonClass .news-title{
@@ -750,7 +744,7 @@
 		color: #000;
 		float: right;
 		font-size: 1.3rem;
-		margin-right: 20px;
+		margin-right: 40px;
 	}
 
 	#content #teacher-show .teacher-title .teacher-logo>img{
@@ -1115,10 +1109,37 @@
 	.friend .school-content .left,.friend .school-content .right{
 		display: none;
 	}
+
+	.friend .other-school {
+		position: absolute;
+		bottom: 0px;
+		background-color: #ccc;
+		padding-left: 30px;
+		width: 100%;
+	}
+	.friend .other-school select {
+		width: 25%;
+		
+	}
+	#move_to {
+		display: inline-block;
+		width: 50px;
+		background-color: #87c8dc;
+		border-radius: 4px;
+		margin-left: 20px;
+		cursor: pointer;
+		text-align: center;
+		height: 23px;
+		vertical-align: top;
+		line-height: 23px;
+		letter-spacing: 4px;
+	}
+
+
 	/*友情链接*/
 	.links{
 		width: 100% !important;
-		margin-top: 250px !important;
+		margin-top: 50px !important;
 		margin-bottom: 40px;
 	}
 
